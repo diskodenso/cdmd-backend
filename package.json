@@ -11,7 +11,9 @@
     "url": "git+https://github.com/diskodenso/cdmb.git"
   },
   "keywords": [
+    "express",
     "nodejs",
+    "restful-api",
     "sql"
   ],
   "author": "Christian Scholtysik & Denis Olf",
