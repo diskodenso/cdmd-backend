@@ -6,9 +6,11 @@ import pool from "../db/pg.js";
 
 // ------ get all articles controller ------//
 export const getAllArticles = (req, res) => {
+    // console.log("here");
     pool
-    //SQL SELECT * FROM user - select all data from users table
-    .query("SELECT * FROM aricles")
+
+    //     //SQL SELECT * FROM user - select all data from users table
+    .query("SELECT * FROM articles")
     .then((data) => res.status(200).json({ articles: data.rows }))
     .catch((err) => res.status(500).json(err));
 };
