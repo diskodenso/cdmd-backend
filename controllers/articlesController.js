@@ -15,5 +15,6 @@ export const getAllArticles = (req, res) => {
 
 // ------ get single articles controller ------//
 export const getSingleArticle = (req, res) => {
-    console.log("hello here")
+    const { id } = req.params;
+    pool.query("SELECT*FROM articles WHERE id=$1", [id])
 }
