@@ -14,3 +14,6 @@ export const getAllArticles = (req, res) => {
 };
 
 // ------ get single articles controller ------//
+export const getSingleArticle = (req, res) => {
+    console.log("hello here")
+}
