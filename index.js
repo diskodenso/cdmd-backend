@@ -1,3 +1,5 @@
+// import dotenv
+import 'dotenv/config';
 // import express
 import express from "express";
 // import articlesRouter
@@ -12,12 +14,11 @@ app.use(express.json());
 app.use('/api/articles', articlesRouter);
 // basic route
 app
-  .route("/")
+  .route('/')
   .get((req, res) =>
     res.send(
       "<h1>Welcome on our API</h1><h2>following endpoints are available:</h2>"
-    )
-);
+    ));
   
   // listen to incoming client requests
 app.listen(port, () =>
