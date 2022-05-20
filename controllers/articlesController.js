@@ -56,7 +56,7 @@ export const deleteArticle = (req, res) => {
 };
 // ------ update articles controller ------//
 export const updateArticle = (req, res) => {
-  const (id) = req.params;
+  const {id} = req.params;
   const { title, image_url, short_description, description, location, publishing_date, tags } = req.body;
   pool
     .query("UPDATE articles SET title=$1, image_url=$2, short_description=$3, description=$4, location=$5, publishing_date=$6, tags=$7, id=$8 RETURNING *;", [title, image_url, short_description, description, location, publishing_date, tags, id]
