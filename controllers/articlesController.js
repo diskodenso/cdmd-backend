@@ -1,5 +1,4 @@
 // import pool
-import res from "express/lib/response";
 import pool from "../db/pg.js";
 
 // we have to export every controller seperately
