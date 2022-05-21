@@ -14,11 +14,12 @@ app.use(express.json());
 app.use('/api/articles', articlesRouter);
 // basic route
 app
-  .route('/')
+  .route("/")
   .get((req, res) =>
     res.send(
-      "<h1>Welcome on our API</h1><h2>following endpoints are available:</h2>"
-    ));
+      "<h1>Willkommen auf unserer API</h1><h2>folgende Endpunkte sind verfügbar:</h2><p>/articles -> alle Länder abrufen & neue Länder hinzufügen</p><p>/articles/:id -> einzelnen Länder abrufen, Länder löschen, Länder aktualisieren</p>"
+    )
+  );
   
   // listen to incoming client requests
 app.listen(port, () =>
