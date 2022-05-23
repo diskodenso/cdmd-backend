@@ -22,7 +22,7 @@ app
   .route("/")
   .get((req, res) =>
     res.send(
-      "<h1>Willkommen auf unserer API</h1><h2>folgende Endpunkte sind verfügbar:</h2><p>/articles -> alle Länder abrufen & neue Länder hinzufügen</p><p>/articles/:id -> einzelnen Länder abrufen, Länder löschen, Länder aktualisieren</p>"
+      "<h1>Willkommen auf unserer API</h1><h2>folgende Endpunkte sind verfügbar:</h2><p>/articles -> alle Blogposts abrufen & neue Blogposts hinzufügen</p><p>/articles/:id -> einzelnen Blogposts abrufen, Blogposts löschen, Blogposts aktualisieren</p><p>/authors -> alle Authors abrufen & neue Authors hinzufügen</p><p>/authors/:id -> einzelnen Authors abrufen, Author löschen, Author aktualisieren</p>"
     )
   );
   
