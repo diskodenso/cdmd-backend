@@ -30,6 +30,8 @@ export const getSingleArticle = (req, res) => {
     })
     .catch((err) => res.status(500).json(err));
 };
+
+
 // ------ create new articles controller ------//
 export const createNewArticle = (req, res) => {
   const { title, image_url, short_description, location, publishing_date, tags } = req.body;
@@ -40,15 +42,18 @@ export const createNewArticle = (req, res) => {
     .then((data) => res.status(200).json(data.rows[0]))
   .catch ((err) => res.status(500).json(err));
 };
+
+
 // ------ delete articles controller ------//
 export const deleteArticle = (req, res) => {
   const { id } = req.params;
   pool
     .query("DELETE FROM articles WHERE id=$1", [id])
     .then((data) => {
-      if (data.rows.length == 0) {
+      if (data.rowCount == 0) {
         res.status(404).send("There is no article matching this ID");
-        res.status(200).send("Articles successfully deleted!");
+      } else {
+                res.status(200).send("Articles successfully deleted!");
       }
     })
     .catch((err) => res.status(500).json(err));
